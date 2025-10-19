@@ -1,0 +1,57 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MoodBloom 🌸</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="header">
+      <h1 class="logo">MoodBloom 🌸</h1>
+      <p class="sub">Tiny daily check-ins that help your feelings grow into blooms.</p>
+    </header>
+
+    <main class="main">
+      <section class="card input-card">
+        <h2>How are you feeling today?</h2>
+        <textarea id="moodInput" placeholder="Write one sentence about today..."></textarea>
+        <div class="controls">
+          <select id="moodTag">
+            <option value="">Auto detect mood</option>
+            <option value="happy">😊 Happy</option>
+            <option value="calm">😌 Calm</option>
+            <option value="sad">😔 Sad</option>
+            <option value="anxious">😟 Anxious</option>
+            <option value="tired">😴 Tired</option>
+          </select>
+          <button id="saveBtn" class="btn primary">Send to Bloom 💌</button>
+        </div>
+        <p class="note">Entries are stored locally in your browser. No account required.</p>
+      </section>
+
+      <section class="card garden-card">
+        <h2>Your Mood Garden</h2>
+        <div id="garden" class="garden-grid"></div>
+        <div class="garden-actions">
+          <button id="exportBtn" class="btn">Export JSON</button>
+          <button id="clearBtn" class="btn danger">Clear All</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">Made with 💖 • MoodBloom — a gentle check-in</footer>
+  </div>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-card">
+      <button id="closeModal" class="close">✕</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

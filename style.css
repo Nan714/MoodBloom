@@ -1,0 +1,46 @@
+
+/* style.css - MoodBloom single-page, pastel, handwritten vibes */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+
+:root{
+  --bg1:#fff8f7; --bg2:#fbfcff; --card:#ffffff;
+  --accent:#f3a8b3; --muted:#6b5b5b; --green:#b7dfc6;
+  --shadow: 0 10px 30px rgba(30,20,20,0.06);
+  --radius:16px;
+}
+
+*{box-sizing:border-box}
+body{margin:0; font-family:Inter, system-ui, -apple-system, "Segoe UI"; background:linear-gradient(180deg,var(--bg1),var(--bg2)); color:#222; -webkit-font-smoothing:antialiased; padding:28px; display:flex; justify-content:center; align-items:flex-start; min-height:100vh;}
+.wrap{width:100%; max-width:980px; display:flex; flex-direction:column; gap:18px;}
+.header{background:transparent; text-align:center; margin-bottom:6px;}
+.logo{font-family:'Dancing Script', cursive; font-size:44px; color:var(--accent); margin:6px 0;}
+.sub{color:var(--muted); margin:0; font-size:15px;}
+.main{display:grid; grid-template-columns:1fr 420px; gap:20px;}
+.card{background:var(--card); padding:18px; border-radius:var(--radius); box-shadow:var(--shadow);}
+.input-card h2, .garden-card h2{margin:0 0 8px 0; font-size:18px;}
+textarea{width:100%; min-height:110px; padding:12px; border-radius:12px; border:1px solid #f3e0e3; resize:vertical; font-size:15px; background:#fffaf9; outline:none;}
+.controls{display:flex; gap:10px; align-items:center; margin-top:10px;}
+select{padding:10px 12px; border-radius:10px; border:1px solid #f3e0e3; background:white;}
+.btn{padding:10px 14px; border-radius:999px; background:transparent; border:1px solid #e9d4d6; cursor:pointer;}
+.btn.primary{background:linear-gradient(90deg,#ffdfe3,#ffd1db); color:#7a2b3b; border:none; font-weight:700;}
+.btn.danger{background:#fff0f1; border:1px solid #f2c2c7; color:#a33;}
+.note{font-size:13px; color:var(--muted); margin-top:8px;}
+
+/* garden */
+.garden-grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(120px,1fr)); gap:14px; margin-top:12px;}
+.bloom{display:flex; flex-direction:column; align-items:center; padding:12px; border-radius:12px; background:linear-gradient(180deg,#fff,#fffaf6); box-shadow:0 6px 18px rgba(100,70,90,0.04); cursor:pointer; transition:transform .18s ease;}
+.bloom:hover{transform:translateY(-6px) scale(1.02);}
+.flower{width:86px;height:86px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:32px;box-shadow:0 8px 18px rgba(110,90,130,0.06);}
+.date{font-size:13px;color:var(--muted); margin-top:8px;}
+
+/* modal */
+.modal{position:fixed; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,0.25);}
+.modal.hidden{display:none;}
+.modal-card{width:min(680px,92%); background:white; padding:18px; border-radius:12px; box-shadow:var(--shadow); position:relative;}
+.close{position:absolute; right:12px; top:12px; border:none; background:transparent; font-size:18px; cursor:pointer;}
+
+/* footer */
+.footer{text-align:center; color:var(--muted); font-size:13px; margin-top:6px;}
+
+/* responsive */
+@media (max-width:900px){ .main{grid-template-columns:1fr} .garden-card{order:2} .input-card{order:1} }
