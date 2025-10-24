@@ -20,6 +20,10 @@ Type in how you feel, press Bloom, and watch your thoughts grow into a soft, eve
 •	JavaScript (Vanilla)
 •	Responsive layout (works on desktop & mobile)
 •	Deployed via GitHub Pages
+
+🌷 LLM
+
+ChatGPT 5.0
  
 🌺 Inspiration
 
